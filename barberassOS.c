@@ -26,17 +26,17 @@ int main(int argc, char *argv[])
     pthread_t btid;
     pthread_t tid[Mcust];
     int i, x, numBcusts, numChairs; int Number[Mcust];
-    printf("Maximum number of Customers can only be 25. Enter number of Customers and chairs.\n");
+    printf("Max Cust 25. Enter number of Customers < 25 and chairs.\n");
     scanf("%d",&x);
     numBcusts = x;
     scanf("%d",&x);
     numChairs = x;
     if (numBcusts > Mcust) {
-       printf("The maximum number of customers is %d.\n", Mcust);
+       printf("Max customers entered are %d.\n", Mcust);
        system("PAUSE");   
        return 0;
     }
-    printf("A solution to the sleeping Barb problem using semaphores.\n");
+    printf("A solution to the sleeping Barb problem with semaphores.\n");
     for (i = 0; i < Mcust; i++) {
         Number[i] = i;
     }
