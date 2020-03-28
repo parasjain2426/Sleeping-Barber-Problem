@@ -10,15 +10,15 @@ void *Barb(void *);
 void cust_wait(int secs);
 
 //Define the semaphores.
-// waitingRoom Limits the # of Bcusts allowed  to enter the waiting room at one time.
+// waitingRoom Limits the # of Customers allowed  to enter the waiting room at one time.
 sem_t Wroom;
-// BarbChair ensures mutually exclusive access to the Barb chair.
+// BarbChair ensures mutually exclusive access to the Barber chair.
 sem_t BarbChair;
-// BarbSleep is used to allow the Barb to sleep until a Bcust arrives.
+// BarbSleep is used to allow the Barb to sleep until a Customer arrives.
 sem_t BarbSleep;
 // cutseat is used to make the Bcust to wait until the Barb is done cutting his/her hair.
 sem_t cutseat;
-// variable to stop the Barb thread when all Bcusts have been serviced.
+// variable to stop the Barb thread when all Customer have been serviced.
 int allOver = 0;
 
 int main(int argc, char *argv[])
