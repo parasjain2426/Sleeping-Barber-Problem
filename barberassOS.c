@@ -25,13 +25,22 @@ int main(int argc, char *argv[])
 {
     pthread_t btid;
     pthread_t tid[Mcust];
-    int i, x, numBcusts, numChairs; int Number[Mcust];
+    int i, x, numBcusts, numChairs,perm=0; 
+    int Number[Mcust];
     printf("Max Cust 25. Enter number of Customers < 25 and chairs.\n");
     scanf("%d",&x);
     numBcusts = x;
     scanf("%d",&x);
     numChairs = x;
-    if (numBcusts > Mcust) {
+    printf("Are Customers Coming to the Shop at Once.\n Yes(1) or No(0)\n");
+    scanf("%d",&x);
+    perm = x;
+    if(perm==1 && numBcusts > numChairs){
+        int leave = numBcusts - numChairs;
+        printf("%d Customers will Leave the Shop as no place is Free",leave);
+        numBcusts = numBcusts - leave;
+    }
+    else if (numBcusts > Mcust) {
        printf("Max customers entered are %d.\n", Mcust);
        system("PAUSE");   
        return 0;
