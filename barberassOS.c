@@ -103,7 +103,7 @@ void *Barb(void *junk)
      sem_post(&cutseat);
     }
     else {
-         printf("The Barb is going home for the day.\n");
+         printf("The Day is Over!! Barber going to home.\n");
     }
    }
 }
